@@ -1,5 +1,6 @@
 package OrangeHrm.Pages;
 
+import OrangeHrm.DataBase.InsertDataBase;
 import OrangeHrm.Steps.ButtonPages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,6 +11,7 @@ import org.openqa.selenium.support.PageFactory;
 public class PimPage {
 
     private ButtonPages buttonPages;
+    private InsertDataBase insertDataBase;
 
     @FindBy(how = How.NAME, using = "firstName")
     private WebElement txtFirstName;
@@ -35,6 +37,7 @@ public class PimPage {
         txtFirstName.sendKeys(firstName);
         txtMiddleName.sendKeys(middleName);
         txtLastName.sendKeys(lastName);
+        //insertDataBase.insertEmployee(firstName,middleName,lastName);
         buttonPages.btnSave();
     }
 }
