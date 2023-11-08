@@ -20,6 +20,15 @@ public class ButtonPages {
     @FindBy(how = How.XPATH, using = "//button[text()=' Save ']")
     private WebElement btnSave;
 
+    @FindBy(how = How.XPATH, using = "//span[text()='Admin']")
+    private WebElement btnAdmin;
+
+    @FindBy(how = How.XPATH, using = "//span[text()='My Info']")
+    private WebElement btnMyInfo;
+
+    @FindBy(how = How.XPATH, using = "//a[text()='Contact Details']")
+    private WebElement btnContactsDetails;
+
     public ButtonPages(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
@@ -42,5 +51,20 @@ public class ButtonPages {
     public void btnSave(){
         btnSave.isEnabled();
         btnSave.click();
+    }
+
+    public void btnAdmin (){
+        btnAdmin.isDisplayed();
+        btnAdmin.click();
+    }
+    public void btnMyInfo (){
+        btnMyInfo.isDisplayed();
+        btnMyInfo.click();
+
+    }
+    public void setBtnContactsDetails (){
+        btnContactsDetails.isDisplayed();
+        btnContactsDetails.click();
+
     }
 }

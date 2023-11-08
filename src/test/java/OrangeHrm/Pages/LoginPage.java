@@ -38,10 +38,10 @@ public class LoginPage {
     public void fillOutLogin(String userName, String password) throws SQLException {
         this.txtUser.sendKeys(userName);
         this.txtPass.sendKeys(password);
-        this.consultDataBase.consultUsers();
+        //this.consultDataBase.consultUsers();
         this.buttonPage.btnLogin();
         this.questions.timeSecond(2);
-        this.questions.screenShot();
+        //this.questions.screenShot();
 
     }
 }
