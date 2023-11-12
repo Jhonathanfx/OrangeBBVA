@@ -61,11 +61,16 @@ public class DefinitionsSteps {
     public void llegarMyInfo() {
         this.myInfo = new MyInfo(driver);
         this.myInfo.llegarMyInfo();
-        }
+    }
 
-    @When("^the user fill out Street1 (.*)$")
-    public void fillOutContactsDetails (String Street1) {
+    @When("^the user fill out Street1 (.*) City (.*) State (.*)$")
+    public void fillOutContactsDetails(String Street1, String City, String State) {
         this.myInfo = new MyInfo(driver);
-        this.myInfo.fillOutContactsDetails(Street1);
+        this.myInfo.fillOutContactsDetails(Street1, City, State);
+    }
+
+    @When("^el usuario esta buscando Country (.*)$")
+    public void buscarCountry(String typeCountry){
+        this.myInfo.buscarCountry(typeCountry);
     }
 }

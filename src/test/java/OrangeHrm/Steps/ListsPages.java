@@ -9,6 +9,7 @@ public class ListsPages {
     private WebDriver driver;
 
     public ListsPages (WebDriver driver){
+
         this.driver = driver;
     }
 
@@ -20,4 +21,11 @@ public class ListsPages {
         selectRole.click();
     }
 
+    public void country(String typeCountry){
+        WebElement listCountry = driver.findElement(By.xpath("//*[text()= 'Country']//..//..//i"));
+        listCountry.click();
+
+        WebElement selectCountry = listCountry.findElement(By.xpath("//*[text()='"+typeCountry+"']"));
+        selectCountry.click();
+    }
 }
